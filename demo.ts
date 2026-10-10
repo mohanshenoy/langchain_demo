@@ -15,14 +15,14 @@ const model = new ChatGoogleGenerativeAI({
 
 // 2. Create a prompt
 const prompt = PromptTemplate.fromTemplate(
-    "Explain the concept of {topic} to a beginner."
+    "You are a helpful Assistant. Answer the question: {topic}"
 );
 
 // 3. Build a chain with LCEL pipe syntax
 const chain = prompt.pipe(model).pipe(new StringOutputParser());
 
 // 4. Run it
-const stream = await chain.stream({ topic: "quantum computing" });
+const stream = await chain.stream({ topic: "What is the future of AI in Healthcare?" });
 
 process.stdout.write("Gemini Response:\n");
 for await (const chunk of stream) {

@@ -3,11 +3,14 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "start": "tsx demo.ts"
+    "demo1": "tsx demo.ts",
+    "demo2": "tsx agent.ts"
   },
   "dependencies": {
-    "@langchain/core": "^0.3.0",
-    "@langchain/google-genai": "^0.1.0",
+    "@langchain/community": "^1.1.29",
+    "@langchain/core": "^1.2.17",
+    "@langchain/google-genai": "^2.3.2",
+    "@langchain/langgraph": "^1.4.21",
     "@langchain/openai": "^1.6.2",
     "dotenv": "^18.0.7",
     "langchain": "^1.5.16",
